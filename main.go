@@ -5,14 +5,15 @@ import (
 	"bot/m/v2/wallet"
 	"fmt"
 	"log"
+	"os"
 	"strconv"
 	"sync"
 
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api"
 )
 
-const (
-	botToken = "8039998217:AAHQjHthxkm5EhxFzxCTlkImxA4DDdiwit8" // Replace with your actual bot token
+var (
+	botToken = os.Getenv("BOT_TOKEN") // Replace with your actual bot token
 )
 
 // Callback constants
